@@ -8,15 +8,20 @@ aws_instances = func() {
     }
     return instances
 }
-# Allowed availability zones
+# Allowed regions
 allowed_regions = [
   "us-east-1",
   "us-east-2",
   "us-west-1",
   "us-west-2",
-  "eu-central-1"
+  "eu-central-1",
+  "eu-west-1",
+  "eu-west-2",
+  "eu-west-3",
+  "eu-north-1",
+  "eu-south-1"
 ]
-# Rule to restrict availability zones and region
+# Rule to restrict availability region
 main = rule {
     all aws_instances() as _, instances {
       all instances as index, r {
