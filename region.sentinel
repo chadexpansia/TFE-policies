@@ -1,4 +1,3 @@
-# NOTE that you must explicitly specify availability_zone on all aws_instances 
 import "tfplan"
 # Get all AWS instances from all modules
 aws_instances = func() {
